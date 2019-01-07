@@ -18,8 +18,24 @@
     <div class="row">
       <div class="ccol-md-4 col-sm-12 field">
         <div class="label">Gender</div>
-        <input type="radio">
-        <input type="radio">
+
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="male" name="gender">
+          <div class="checkmark">
+            <span></span>
+          </div>
+
+          <label class="form-check-label" for="male">Male</label>
+        </div>
+
+        <div class="form-check">
+          <input type="radio" class="form-check-input" id="female" name="gender">
+          <div class="checkmark">
+            <span></span>
+          </div>
+          <label class="form-check-label" for="female">Female</label>
+        </div>
+
       </div>
     </div>
   </div>
@@ -28,7 +44,8 @@
     <div class="row">
       <div class="col-md-5 col-sm-12 field error">
         <div class="label">Address</div>
-        <input type="text">
+        <input type="text" value="123 Big Street, City, State 000">
+        <div class="error-message">Zipcode is incorrect</div>
       </div>
     </div>
   </div>

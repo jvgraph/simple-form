@@ -2,6 +2,77 @@
   form {
     .field {
       margin-bottom: 20px;
+
+      &.error {
+        color: $brand-danger !important;
+
+        input {
+          border-bottom-color: $brand-danger;
+          color: $brand-danger;
+        }
+
+        .label {
+          color: $brand-danger;
+        }
+      }
+    }
+
+    .form-check {
+      display: flex;
+      justify-content: flex-start;
+      align-items: center;
+      position: relative;
+      margin-bottom: 8px;
+
+      label {
+        margin-left: 10px;
+      }
+
+      .checkmark {
+        display: inline-block;
+        width: 27px;
+        height: 27px;
+        position: absolute;
+        background-color: white;
+        border-radius: 100%;
+        pointer-events: none;
+        border: 1px solid black;
+
+        span {
+          display: block;
+          position: relative;
+          width: 27px;
+          height: 27px;
+          border-radius: 100%;
+
+          &:after {
+            position: absolute;
+            display: block;
+            content: "";
+            width: 21px;
+            height: 21px;
+            top: 2px;
+            left: 2px;
+            border-radius: 100%;
+            z-index: 99;
+            background-color: white;
+          }
+        }
+
+
+      }
+
+      input {
+        width: 27px;
+        height: 27px;
+        margin: 0;
+
+        &:checked~.checkmark>span {
+          &:after {
+            background-color: red;
+          }
+        }
+      }
     }
 
     .label {
@@ -12,13 +83,20 @@
       display: inline-block;
     }
 
+    .error-message {
+      margin-top: 10px;
+      font-size: 14px;
+    }
+
     input {
       width: 100%;
       background-color: #f7f7f7;
       height: 48px;
       border: none;
-      border-bottom: 1px solid black;
+      border-bottom: 2px solid black;
       padding: 0 10px;
+      font-size: 16px;
+      color: black;
 
       &:focus {
         outline: none;

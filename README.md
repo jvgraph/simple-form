@@ -21,16 +21,15 @@ Install all dependencies using npm:
 npm install
 ````
 
-Run the default Gulp task to get started:
+Run the default Gulp task to Build and run the local server
 
 ```sh
 gulp
 ```
 
 ```sh
-[BS] Access URLs:
+Access URLs:
  ----------------------------------
        Local: http://localhost:3000
-    External: http://10.0.X.XX:3000
  ----------------------------------
 ```
