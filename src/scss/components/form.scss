@@ -1,7 +1,7 @@
 .form--container {
   form {
     .field {
-      margin-bottom: 20px;
+      margin-bottom: 40px;
 
       &.error {
         color: $brand-danger !important;
@@ -17,6 +17,7 @@
       }
     }
 
+
     .form-check {
       display: flex;
       justify-content: flex-start;
@@ -26,6 +27,10 @@
 
       label {
         margin-left: 10px;
+        color: black;
+        margin-bottom: 0;
+        font-weight: 400;
+        font-size: 16px;
       }
 
       .checkmark {
@@ -36,7 +41,8 @@
         background-color: white;
         border-radius: 100%;
         pointer-events: none;
-        border: 1px solid black;
+        border: 1px solid #9b9b9b;
+        ;
 
         span {
           display: block;
@@ -49,10 +55,10 @@
             position: absolute;
             display: block;
             content: "";
-            width: 21px;
-            height: 21px;
-            top: 2px;
-            left: 2px;
+            width: 19px;
+            height: 19px;
+            top: 3px;
+            left: 3px;
             border-radius: 100%;
             z-index: 99;
             background-color: white;
@@ -69,7 +75,7 @@
 
         &:checked~.checkmark>span {
           &:after {
-            background-color: red;
+            background-color: #9b9b9b;
           }
         }
       }

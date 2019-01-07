@@ -1,6 +1,6 @@
 {{> header title='simple page'}}
 
-<div class="content">
+<div id="page">
   <div class="main">
     <div class="container">
       <div class="col-md-12">
@@ -10,16 +10,18 @@
         </div>
       </div>
       <div class="form--container col-md-12">
-        <div class="form--header">
+        <div class="page-header form-header">
           <h1>Personal Information</h1>
+          <h2>Section header subcopy can be as long as you want too</h2>
         </div>
         {{> form}}
-        <nav aria-label="pagination">
-          <ul class="pager">
-            <li class="previous"><a href="#"><span aria-hidden="true">&larr;</span> PREVIOUS</a></li>
-            <li class="next"><a href="#">Newer <span aria-hidden="true">&rarr;</span></a></li>
-          </ul>
-        </nav>
+        <div class="form-pagination">
+          <div class="left"><span class="arrow arrow-prev"></span><a href="#">PREVIOUS</a></div>
+          <div class="right">
+            <button type="button" class="btn btn-default">Cancel</button>
+            <button type="button" class="btn btn-default disabled">Next</button>
+          </div>
+        </div>
       </div>
     </div>
   </div>

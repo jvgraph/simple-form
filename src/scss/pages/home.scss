@@ -1,11 +1,23 @@
-.content {
+#page {
   .page-header {
+    margin-top: 45px;
+    margin-bottom: 0;
+
+    &.form-header {
+      margin-bottom: 45px;
+
+      h1 {
+        font-size: 28px;
+      }
+    }
+
     h1 {
       font-size: 34px;
       font-family: $font-family-sans-serif;
       font-weight: 800;
       color: black;
       letter-spacing: -1px;
+      margin-bottom: 0px;
     }
 
     h2 {
@@ -13,8 +25,69 @@
       color: $gray-base;
       letter-spacing: -0.0125rem;
       font-weight: 400;
+      margin-top: 10px;
     }
   }
 
-  .form--container {}
+  .form-pagination {
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    margin-top: 80px;
+    margin-bottom: 60px;
+    height: 50px;
+    font-size: 14px;
+    font-weight: bold;
+    color: black;
+
+    .left {
+      display: flex;
+      align-items: center;
+      align-self: flex-start;
+
+      @media screen and(max-width: 640px) {
+        margin-bottom: 30px;
+      }
+
+      a {
+        color: black;
+      }
+    }
+
+    .right {
+      align-self: flex-end;
+
+      .btn {
+        height: 50px;
+        width: 140px;
+        font-weight: bold;
+        text-transform: uppercase;
+        font-size: 14px;
+
+        &:last-of-type {
+          margin-left: 30px;
+        }
+
+        &.disabled {
+          background-color: #9B9B9B;
+          border-color: #9B9B9B;
+          color: white;
+        }
+      }
+    }
+  }
+
+  .arrow {
+    width: 12px;
+    height: 17px;
+    display: inline-block;
+
+    &.arrow-prev {
+      background-image: url("../../images/arrow-prev.svg");
+      background-repeat: no-repeat;
+      margin-right: 5px;
+    }
+  }
 }
